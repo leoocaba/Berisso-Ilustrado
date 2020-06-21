@@ -1,0 +1,67 @@
+.contenedor {
+    display: grid;
+}
+
+.contenedor .__btn-modal {
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    color: #000;
+    width: 200px;
+    height: 60px;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.contenedor .__btn-modal .span {
+    background: #000;
+    position: absolute;
+    transition: .3s;
+}
+
+.contenedor .__btn-modal .span:nth-child(1),
+.contenedor .__btn-modal .span:nth-child(3) {
+    width: 20px;
+    height: 2px;
+}
+
+.contenedor .__btn-modal .span:nth-child(2),
+.contenedor .__btn-modal .span:nth-child(4) {
+    width: 2px;
+    height: 20px;
+}
+
+.contenedor .__btn-modal .span:nth-child(1),
+.contenedor .__btn-modal .span:nth-child(2) {
+    top: 0;
+    left: 0;
+}
+
+.contenedor .__btn-modal .span:nth-child(3),
+.contenedor .__btn-modal .span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+.contenedor .__btn-modal:hover .span:nth-child(1),
+.contenedor .__btn-modal:hover .span:nth-child(3) {
+    width: 100%;
+}
+
+.contenedor .__btn-modal:hover .span:nth-child(2),
+.contenedor .__btn-modal:hover .span:nth-child(4) {
+    height: 100%;
+}
+
+.contenedor .__btn-modal:nth-child(1):hover .span {
+    box-shadow: 0 0 20px #0cb9ee;
+}
+
+.contenedor .__btn-modal:nth-child(1) .span {
+    background: #0cb9ee;
+}
+
+.contenedor .__btn-modal:nth-child(1) {
+    color: #0cb9ee;
+}

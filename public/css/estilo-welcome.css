@@ -1,0 +1,288 @@
+/*ESTILO BODY*/
+
+body main {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+.__form {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+}
+
+
+/*FIN ESTILO BODY*/
+
+
+/*ESTILO HEADER*/
+
+body header {
+    background-color: black;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+body main header #titulo-del-sitio {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    color: white!important;
+    display: inline;
+}
+
+body main .__div-h1:hover {
+    z-index: 1;
+}
+
+body main header #titulo-del-sitio:hover {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09);
+}
+
+.__container .__navbar .__navbar-nav li a {
+    padding: 3px;
+    color: black!important;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'BenchNine', sans-serif!important;
+}
+
+.__container .__navbar .__navbar-nav {
+    transition: all 0.3s ease-in-out;
+}
+
+.__container .__navbar .__navbar-nav li a:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09);
+}
+
+.__container .__navbar .__navbar-toggler {
+    outline: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.__container .__navbar .__navbar-toggler .navbar-toggler-icon {
+    color: blanchedalmond;
+    height: 30px;
+    width: 30px;
+}
+
+header #logo-imagen {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    filter: grayscale(50%);
+}
+
+.__container .__navbar {
+    background-color: black!important;
+    ;
+}
+
+
+/*MENU BOTÓN*/
+
+.__body,
+.__nav,
+.__menu {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.__nav {
+    background-color: black;
+    position: relative;
+    padding: 0;
+    transition: 600ms;
+    overflow: hidden;
+}
+
+.__nav .__menu {
+    background-color: black;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.__nav input:checked~.__menu {
+    background-color: black;
+    width: 500px;
+}
+
+.__nav .__menu li a {
+    font-family: 'BenchNine', sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.__nav .__menu li a:hover {
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09);
+    background-color: rgb(230, 224, 224);
+}
+
+.__nav input {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.__nav span {
+    position: absolute;
+    left: 30px;
+    width: 25px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.__nav input:checked~span {
+    background-color: #f974a1;
+}
+
+.__nav span:nth-child(2) {
+    transform: translateY(-6px);
+}
+
+.__nav input:checked~span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.__nav span:nth-child(3) {
+    transform: translateY(6px);
+}
+
+.__nav input:checked~span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.__nav span:nth-child(4) {
+    transform: translateY();
+}
+
+.__nav input:checked~span:nth-child(4) {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+/*FIN MENU BOTÓN*/
+
+
+/*FIN ESTILO HEADER*/
+
+
+/*ESTILO DEL FOOTER*/
+
+.site-footer {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 18px;
+    bottom: 0;
+    color: #737373;
+    box-sizing: border-box;
+}
+
+.site-footer hr {
+    padding: 0;
+    margin: o auto;
+    border-top-color: #bbb;
+    opacity: 0.5
+}
+
+p .copyright-text {
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+}
+
+.site-footer .texto p {
+    text-align: center;
+}
+
+.site-footer .texto #contactos {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+.site-footer .texto p a {
+    text-decoration: none;
+    color: #005082;
+    padding: 5px;
+}
+
+.site-footer .__creado-por {
+    text-decoration: none;
+    padding-left: 4px!important;
+}
+
+.site-footer .texto nav ul li:hover {
+    color: beige!important;
+}
+
+
+/*FIN ESTILLO FOOTER*/
+
+
+/*ESTILO SUBIR IMAGENES*/
+
+body main #contenido #subirImagenes form {
+    width: 600px;
+}
+
+body main #contenido #subirImagenes {
+    background-color: white;
+}
+
+
+/*FIN ESTILO SUBIR IMÁGENES*/
+
+
+/* Por debajo de 700px */
+
+@media screen and (max-width: 700px) {
+    body main header #titulo-del-sitio,
+    body main header .__div-h1 {
+        display: block;
+        font-size: 22px;
+        margin-top: 10px;
+    }
+}
+
+
+/* Por debajo de 400px */
+
+@media screen and (max-width: 400px) {
+    body main header #titulo-del-sitio,
+    body main header .__div-h1 {
+        font-size: 22px;
+        display: block;
+        margin-top: 10px;
+    }
+}
