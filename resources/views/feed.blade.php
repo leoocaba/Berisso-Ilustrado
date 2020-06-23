@@ -19,19 +19,25 @@
 
                         @for ($j = 0; $j < count($usuario->publications); $j++)
                         <div class="container justify-content-center mx-auto px-0">
-                                <div class="col-12 d-flex justify-content-center">
+                                <div class="col-12 d-flex justify-content-center ml-2">
 
                                     <div id="carouselExampleIndicators-{{$usuario->publications[$j]->id}}" 
                                         class="carousel slide row col-12 col-md-8 my-4 d-flex justify-content-center" 
                                         style="" data-interval="false" data-ride="carousel">
                                         
-                                        <div class="cabecera text-light d-flex col-12 mt-2 mx-0">
+                                        <div class="__cabecera text-light d-flex col-12 mt-2 mx-0 border border-dark border-bottom-0">
                                             <img src="{{ url('/uploads/avatars/' . $usuario->image) }}" class="d-block my-auto"
                                             style="width: 30px; height: 30px; border-radius: 50%;" alt="Avatar de usuario">
 
-                                            <div class="d-inline-block py-0 px-2">
-                                                <h4  class="d-flex d-inline mb-0">{{$usuario->alias}}</h4>
-                                                <p class="d-inline my-0 py-0">{{$usuario->name }}</p> <p class="d-inline my-0 py-0">{{$usuario->surname}}</p>
+                                            <div class="d-inline-block py-0 my-1 px-2">
+                                                <h4  class="__alias d-flex d-inline mb-0">{{$usuario->alias}}</h4>
+                                                <div class="d-flex d-block">
+                                                    <p class="__name my-0 py-0">{{$usuario->name }}</p> <p class="__surname my-0 ml-1 py-0">{{$usuario->surname}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-inline-block d-flex ml-auto p-0 my-1">
+                                            <p class="__updated_at d-flex d-inline m-1 mt-1">{{ $usuario->publications[$j]->updated_at->format('d/m/Y') }}</p>
                                             </div>
                                         </div>
 

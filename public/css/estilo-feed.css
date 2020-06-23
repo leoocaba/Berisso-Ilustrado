@@ -4,11 +4,28 @@
     border-radius: 100%;
 }
 
-.cabecera {
+.__cabecera {
     background-color: #0056b3;
     width: 100%;
     max-width: 400px;
     border-radius: 10px 10px 0 0;
+    font-family: 'BenchNine', sans-serif;
+}
+
+.__cabecera .__alias {
+    font-size: 24px;
+}
+
+.__cabecera .__name,
+.__cabecera .__surname {
+    font-size: 20px;
+}
+
+.__cabecera .__updated_at {
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 3px;
 }
 
 .carousel-inner {
@@ -142,4 +159,33 @@ body main {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .__cabecera .__alias {
+        font-size: 22px;
+    }
+    .__cabecera .__name,
+    .__cabecera .__surname {
+        font-size: 18px;
+    }
+    .__cabecera .__updated_at {
+        font-size: 14px;
+    }
+}
+
+
+/* Por debajo de 400px */
+
+@media screen and (max-width: 400px) {
+    .__cabecera .__alias {
+        font-size: 20px;
+    }
+    .__cabecera .__name,
+    .__cabecera .__surname {
+        font-size: 16px;
+    }
+    .__cabecera .__updated_at {
+        font-size: 12px;
+    }
 }

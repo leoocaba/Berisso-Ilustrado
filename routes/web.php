@@ -18,6 +18,7 @@ Route::get('/subir/imagenes', function(){
 });
 Route::post('/subir/imagenes', 'PublicationController@createPublication');
 
+
 Route::get('/perfil', 'UserController@profile');
 
 Auth::routes();

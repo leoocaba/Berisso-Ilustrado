@@ -7,6 +7,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use Image;
 use App\User;
+use App\Publication;
 
 class UserController extends Controller
 {
@@ -28,7 +29,11 @@ class UserController extends Controller
     }
 
     public function profile(){
-        return view('perfil', array('user' => Auth::user()) );
+
+        $userId = (Auth::id());
+        $usuarios = User::where('id', $userId)->with('publications')->orderBy('updated_at', 'DESC')->with('pictures')->get();
+        $vac = compact('usuarios');
+        return view('perfil', $vac );
     }
 
 }
