@@ -25,6 +25,20 @@ inputUser.addEventListener('focusout', floatLabelUser);
 var input = document.querySelector('.field-item');
 var label = document.querySelector('.field-label');
 var icon = document.querySelector('.field-icon');
+const icono = document.getElementById('icon-eye');
+
+icon.addEventListener('click', function() {
+
+    if (icono.classList.contains('fa-eye-slash')) {
+        icono.classList.remove('fa-eye-slash');
+        icono.classList.add('fa-eye');
+
+    } else {
+
+        icono.classList.remove('fa-eye');
+        icono.classList.add('fa-eye-slash');
+    }
+});
 
 const togglePassword = () => {
     var validate = input.type == 'password' ? input.type = 'text' : input.type = 'password';
@@ -37,7 +51,6 @@ const floatLabel = () => {
 const toTop = () => {
     label.classList.add('field-toTop');
 }
-
 icon.addEventListener('click', togglePassword);
 input.addEventListener('focus', toTop);
 input.addEventListener('focusout', floatLabel);

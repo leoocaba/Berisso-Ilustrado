@@ -21,4 +21,6 @@ Route::post('/subir/imagenes', 'PublicationController@createPublication');
 
 Route::get('/perfil', 'UserController@profile');
 
+Route::get('/perfil/editar', 'UserController@editProfile');
+
 Auth::routes();

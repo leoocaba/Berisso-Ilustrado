@@ -1,6 +1,6 @@
 .carousel-indicators .__li {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 100%;
 }
 
@@ -34,6 +34,8 @@
 }
 
 .carousel {
+    width: 100%;
+    max-width: 420px;
     box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
     border-radius: 10px;
 }
@@ -47,7 +49,7 @@
     width: 100%;
     max-width: 400px;
     height: 100%;
-    max-height: 400px;
+    max-height: 350px;
     box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
     border-radius: 0 0 10px 10px;
 }
@@ -130,6 +132,7 @@ body main {
 .scroll {
     height: 600px;
     overflow: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     background-color: #fff;
     padding: 0px;

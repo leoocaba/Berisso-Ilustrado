@@ -15,10 +15,10 @@
     </div>
        
        <!-- Modal -->
-       <div class="modal fade" id="exampleModalCenter" style="z-index:" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
          <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
-             <div id="subirImagenes" class="col-12 py-3">
+             <div id="subirImagenes" style="border-radius: 10px!important;" class="col-12 py-3">
                  <div class="row">
                      <form class="__form col-11 border m-auto pt-3 pl-2 pb-3 pr-2" method="POST" action="/subir/imagenes" enctype="multipart/form-data">
                          {{csrf_field()}}
@@ -37,7 +37,7 @@
                              <label for="file control-label" class="badge badge-pill badge-primary col-12">SELECCIONÁ TUS IMÁGENES</label>
                              <div class="control-label">
                                  <div class="text-nowrap d-flex justify-content-center" id="div_file">  
-                                     <p id="texto"><i class='__icono-camara fas fa-camera icon-file_open text-wrap'></i> </p>   
+                                     <p id="texto"><i class='__icono-camara fas fa-camera-retro icon-file_open text-wrap'></i> </p>   
                                      <input type="file" style="cursor: pointer;" value="{{ old('image') }}" name="image[]" multiple class="form-control" id="btn_enviar" required>
                                     </div>
                              </div>

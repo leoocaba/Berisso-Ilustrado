@@ -22,6 +22,9 @@
 </head>
 
 <body>
+            {{-- LOADER --}}
+            <div class="lds-ring loader" id="loader"> <h4 class="title-loader text-uppercase text-wrap justify-content-center text-center m-0 p-0">Berisso <br> Ilustrado</h4> <div></div> <div></div> <div></div> </div>
+            {{-- FIN LOADER --}}    
     <main class="container">
         <header>
             <div class="col-12 d-flex mx-auto">
@@ -59,10 +62,10 @@
                                     </li>
                                     @else
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase" style="color: #009c8c!important;" href="{{ route('login')}}"><i class='fa fa-sign-in d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
+                                        <a class="nav-link btn btn-link text-uppercase" style="color: #009c8c!important;" href="{{ route('login')}}"><i class='fas fa-user d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
                                     </li>
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase" style="color: rgb(231, 0, 82)!important;" href="{{ route('register')}}"><i class='fas fa-user-plus d-inline mr-2'></i>Registrarme<span class="sr-only"></i>Registrarme</span></a> @endif @endauth
+                                        <a class="nav-link btn btn-link text-uppercase" style="color: rgb(231, 0, 82)!important;" href="{{ route('register')}}"><i class='fas fa-user-friends d-inline mr-2'></i>Registrarme<span class="sr-only"></i>Registrarme</span></a> @endif @endauth
                                     </li>
                                     @endauth
                                 </div>
@@ -95,10 +98,10 @@
                             </li>
                             @else
                             <li class="nav-item mx-auto text-center">
-                                <a class="nav-link btn btn-link text-uppercase container" style="color: #009c8c!important;" href="{{ route('login')}}"><i class='fa fa-sign-in d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
+                                <a class="nav-link btn btn-link text-uppercase container" style="color: #009c8c!important;" href="{{ route('login')}}"><i class='fas fa-user d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
                             </li>
                             <li class="nav-item mx-auto text-center">
-                                <a class="nav-link btn btn-link text-uppercase container" style="color: rgb(231, 0, 82)!important;" href="{{ route('register')}}"><i class='fas fa-user-plus d-inline mr-2'></i>Registrarme<span class="sr-only">Registrarme</span></a> @endif @endauth
+                                <a class="nav-link btn btn-link text-uppercase container" style="color: rgb(231, 0, 82)!important;" href="{{ route('register')}}"><i class='fas fa-user-friends d-inline mr-2'></i>Registrarme<span class="sr-only">Registrarme</span></a> @endif @endauth
                             </li>
                             @endauth
                         </ul>
@@ -143,7 +146,7 @@
 
     </main>
 
-
+    <script src="/js/loader.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

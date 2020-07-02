@@ -52,7 +52,7 @@
                                     <input id="password" style="font-family:Arial, FontAwesome; border-radius: 40px!important; z-index: 4; border: 1px solid #8b8b8b;
                                     background-color: transparent;" type="password" class="form-control field-item  @error('password') is-invalid
                                     @enderror" name="password"  placeholder="&#xf084; Contraseña"> 
-                                    <span class="field-icon"><i class="fas fa-eye"></i></span>   
+                                    <span class="field-icon"><i id="icon-eye" class="fas fa-eye-slash"></i></span>   
                                 </div>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

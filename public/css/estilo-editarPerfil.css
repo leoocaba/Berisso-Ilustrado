@@ -1,0 +1,113 @@
+/*ESTILO DE LOS INPUTS*/
+
+.field-Name,
+.field-Surname,
+.field-Alias {
+    position: relative;
+}
+
+.field-item-Name,
+.field-item-Surname,
+.field-item-Alias {
+    margin-top: 20px;
+    z-index: 1;
+    border: 1px solid #8b8b8b;
+    background-color: transparent;
+}
+
+.field-label-Name,
+.field-label-Surname,
+.field-label-Alias {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    padding: 0px;
+    z-index: -1;
+    color: #8b8b8b;
+    transition: all 300ms;
+    background-color: white;
+}
+
+.field-icon-Name,
+.field-icon-Surname,
+.field-icon-Alias {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 3.5px;
+    cursor: pointer;
+    color: #005cbf;
+    transition: color 300ms;
+}
+
+.field-icon:hover,
+.field-icon:hover {
+    color: black;
+}
+
+.field-toTop-Name,
+.field-toTop-Surname,
+.field-toTop-Alias {
+    border-radius: 20px;
+    width: 60px;
+    height: 24px;
+    z-index: 999;
+    top: -18px;
+    left: 14px;
+    padding: 0;
+    color: #000;
+}
+
+
+/*FIN ESTILO INPUTS*/
+
+.__icono-camara {
+    font-size: 30px;
+    cursor: pointer!important;
+    color: antiquewhite;
+}
+
+.__btn-publicar,
+.__btn-cerrar {
+    font-family: 'BenchNine', sans-serif;
+    font-size: 22px;
+}
+
+div#div_file {
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #0056b3;
+    color: antiquewhite;
+}
+
+#div_file:hover {
+    background-color: #003975;
+}
+
+input#btn_enviar {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.card .card-body label {
+    font-size: 20px;
+    font-family: 'BenchNine', sans-serif;
+}
+
+.card-title {
+    font-size: 24px;
+    font-family: 'BenchNine', sans-serif;
+}

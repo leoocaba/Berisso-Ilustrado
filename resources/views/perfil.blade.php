@@ -19,13 +19,18 @@
                                     <h4 class="text-wrap ml-1 p-0 d-flex d-inline"> {{ Auth::user()->surname }} </h4>
                                 </div>
                 
-                                <div class="container d-flex mx-auto justify-content-center ">
-                                    <h5 class="text-wrap text-uppercase p-0 my-1 d-flex mx-auto d-block"> 
-                                        {{count(Auth::user()->publications)}} Post{{count(Auth::user()->publications) > 1 ? 's' : ''}}</h5>
+                                <div class="container d-flex mx-auto justify-content-center my-1">
+                                    <h5 class="text-wrap text-uppercase d-flex d-block p-0"> 
+                                        {{count(Auth::user()->publications)}} Post{{count(Auth::user()->publications) > 1 ? 's' : ''}} </h5>
+                                        <span class="d-flex d-block mx-1 p-0"><i class="far fa-images p-0 my-0 d-flex d-block"></i></span>
                                 </div>
-                                <div class="d-flex justify-content-center my-2">
-                                    <a class="text-decoration-none text-uppercase d-flex d-inline-block" href=""> <h6 class="d-flex">Editar</h6> </a>
+
+                                <div class="d-flex justify-content-center my-2 mx-auto">
+                                    <a  class="btn btn-link text-decoration-none text-uppercase d-flex d-block" href="/perfil/editar">
+                                        <h6 class="d-flex">Editar</h6>
+                                        <span class="d-flex d-block mx-1"><i class="fas fa-edit"></i></span> </a>
                                 </div>
+
                             </div>
                             <div class="back-bottom">
                                 <span><i class="fab fa-facebook-f"></i></span>
@@ -43,10 +48,10 @@
 
                     @for ($j = 0; $j < count($usuario->publications); $j++)
                     <div class="container justify-content-center mx-auto px-0">
-                            <div class="col-12 d-flex justify-content-center">
+                            <div class="col-12 d-flex justify-content-center px-0">
 
                                 <div id="carouselExampleIndicators-{{$usuario->publications[$j]->id}}" 
-                                    class="carousel slide row col-12 col-md-8 my-4 d-flex justify-content-center" 
+                                    class="carousel slide row col-12 col-md-8 my-4 px-1 d-flex justify-content-center" 
                                     style="" data-interval="false" data-ride="carousel">
                                     
                                     <div class="__cabecera text-light d-flex col-12 mt-2 mx-0 border border-dark border-bottom-0">

@@ -19,10 +19,10 @@
 
                         @for ($j = 0; $j < count($usuario->publications); $j++)
                         <div class="container justify-content-center mx-auto px-0">
-                                <div class="col-12 d-flex justify-content-center ml-2">
+                                <div class="col-12 d-flex justify-content-center mx-auto px-0">
 
                                     <div id="carouselExampleIndicators-{{$usuario->publications[$j]->id}}" 
-                                        class="carousel slide row col-12 col-md-8 my-4 d-flex justify-content-center" 
+                                        class="carousel slide row col-12 col-md-8 my-4 p-1 d-flex justify-content-center" 
                                         style="" data-interval="false" data-ride="carousel">
                                         
                                         <div class="__cabecera text-light d-flex col-12 mt-2 mx-0 border border-dark border-bottom-0">
