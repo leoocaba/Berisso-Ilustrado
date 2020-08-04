@@ -115,20 +115,16 @@ body header {
 body main header #titulo-del-sitio {
     font-family: 'Orbitron', sans-serif;
     font-size: 22px;
-    color: white!important;
+    background: -webkit-linear-gradient(45deg, #3B5998, #DD2A7B, #00ACEE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline;
 }
 
-body main .__div-h1:hover {
-    z-index: 1;
-}
-
 body main header #titulo-del-sitio:hover {
-    margin-bottom: 5px;
-    padding: 5px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09);
+    background: -webkit-linear-gradient(45deg, #284e9e, #e21a74, #0093ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .__container .__navbar .__navbar-nav li a {
@@ -164,15 +160,8 @@ body main header #titulo-del-sitio:hover {
     width: 30px;
 }
 
-header #logo-imagen {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    filter: grayscale(50%);
-}
-
 .__container .__navbar {
-    background-color: black!important;
+    background-color: #fff!important;
     ;
 }
 
@@ -182,14 +171,14 @@ header #logo-imagen {
 .__body,
 .__nav,
 .__menu {
-    background-color: black;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .__nav {
-    background-color: black;
+    background-color: #fff;
     position: relative;
     padding: 0;
     transition: 600ms;
@@ -198,32 +187,32 @@ header #logo-imagen {
 
 .__nav .__menu {
     padding: 20px;
-    background-color: black;
-    height: 70px;
+    background-color: #fff;
+    height: 60px;
     margin: 0;
     padding: 0;
     width: 0;
     overflow: hidden;
+    box-sizing: border-box;
     transition: all 0.3s ease-in-out;
 }
 
 .__nav input:checked~.__menu {
-    background-color: black;
+    background-color: #fff;
     width: 500px;
 }
 
 .__nav .__menu li a {
     font-family: 'BenchNine', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.__nav .__menu li a:hover {
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09);
-    background-color: rgb(230, 224, 224);
+.__nav .__menu li a:hover,
+.__nav .__menu li h4:hover {
+    color: #000!important;
+    font-weight: 500;
+    /* box-shadow: 0 9px 28px rgba(255, 255, 255, 0.17), 0 10px 7px rgba(255, 255, 255, 0.09); */
 }
 
 .__nav input {
@@ -239,7 +228,7 @@ header #logo-imagen {
     width: 25px;
     height: 4px;
     border-radius: 50px;
-    background-color: white;
+    background-color: #000;
     pointer-events: none;
     transition: 0.5s;
 }
@@ -353,6 +342,9 @@ body main #contenido #subirImagenes {
         display: block;
         font-size: 22px;
         margin-top: 10px;
+    }
+    .__container {
+        border-bottom: 1px solid #000;
     }
 }
 

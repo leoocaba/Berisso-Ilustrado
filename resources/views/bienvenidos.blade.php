@@ -28,11 +28,11 @@
     <main class="container">
         <header>
             <div class="col-12 d-flex mx-auto">
-                <div class="__div-h1 container col-6 d-flex p-1 mx-auto">
-                    <h1 class="text-center m-auto"> <a class="text-decoration-none text-wrap m-auto" id="titulo-del-sitio" href="/">Berisso Ilustrado</a></h1>
+                <div class="__div-h1 container col-12 d-flex py-2 m-auto">
+                    <h1 class="text-center m-auto d-flex"> <a class="text-decoration-none text-wrap my-auto" id="titulo-del-sitio" href="/">Berisso Ilustrado</a></h1>
                 </div>
             </div>
-            <div class="__container col-12 container d-flex">
+            <div class="__container col-12 container d-flex bg-white">
                 <nav class="__navbar navbar navbar-expand-md navbar-light bg-light d-flex mx-auto">
                         <div class="__body d-none d-md-block">
                             <nav class="__nav navbar navbar-expand-md mx-auto">
@@ -42,38 +42,38 @@
                                 <span class=""></span>
                                 <div class="__menu navbar-nav">
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: rgb(43, 139, 228)!important;" href="/bienvenidos"><i class='fas fa-home d-inline mr-2'></i>Feed<span class="sr-only">Subir mis Fotos</span></a>
+                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: rgb(43, 139, 228);" href="/bienvenidos"><i class='fas fa-home d-inline mr-2'></i>Feed<span class="sr-only">Subir mis Fotos</span></a>
                                     </li>
     
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: rgb(177, 0, 177)!important;" href="/subir/imagenes"><i class='fas fa-heart d-inline mr-2'></i>Postear<span class="sr-only">Subir mis Fotos</span></a>
+                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: rgb(177, 0, 177);" href="/subir/imagenes"><i class='fas fa-heart d-inline mr-2'></i>Postear<span class="sr-only">Subir mis Fotos</span></a>
                                     </li>
                                     @if (Route::has('login')) @auth
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase d-flex" style="color: #009c8c!important;" href="/perfil" >
+                                        <a class="nav-link btn btn-link text-uppercase d-flex" style="color: #009c8c;" href="/perfil" >
                                         <img class="border border-dark mr-2 my-auto d-block" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" 
-                                        style="width: 30px; height: 30px; border-radius: 50%;"><h4 class="my-auto" style="font-size: 22px;">{{ auth()->user()->alias }}</h4><span class="sr-only">Mi nombre</span></a>
+                                        style="width: 30px; height: 30px; border-radius: 50%;"><h4 class="my-auto" style="font-size: 18px;">{{ auth()->user()->alias }}</h4><span class="sr-only">Mi nombre</span></a>
                                     </li>
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: red!important;" onclick="event.preventDefault();
+                                        <a class="nav-link btn btn-link text-uppercase d-block" style="color: #ff0000;" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                     <i class='fas fa-sign-out-alt d-inline mr-2'></i>Salir<span class="sr-only">Salir</span>
                                   </a>
                                     </li>
                                     @else
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase" style="color: #009c8c!important;" href="{{ route('login')}}"><i class='fas fa-user d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
+                                        <a class="nav-link btn btn-link text-uppercase" style="color: #009c8c;" href="{{ route('login')}}"><i class='fas fa-user d-inline mr-2'></i>Ingresar<span class="sr-only">Ingresar</span></a> @if (Route::has('register'))
                                     </li>
                                     <li class="nav-item mx-auto text-center active">
-                                        <a class="nav-link btn btn-link text-uppercase" style="color: rgb(231, 0, 82)!important;" href="{{ route('register')}}"><i class='fas fa-user-friends d-inline mr-2'></i>Registrarme<span class="sr-only"></i>Registrarme</span></a> @endif @endauth
+                                        <a class="nav-link btn btn-link text-uppercase" style="color: rgb(231, 0, 82);" href="{{ route('register')}}"><i class='fas fa-user-friends d-inline mr-2'></i>Registrarme<span class="sr-only"></i>Registrarme</span></a> @endif @endauth
                                     </li>
                                     @endauth
                                 </div>
                             </nav>
                         </div>
                     <button class="__navbar-toggler navbar-toggler my-2 mx-auto d-md-none" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon">
-                                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                            <span class="navbar-toggler-icon d-flex">
+                                <i class="fas fa-bars p-auto m-auto" style="color:#000; font-size:26px;"></i>
                             </span>
                           </button>
                     <div class="__collapse col-12 collapse navbar-collapse text-dark justify-content-center my-3" id="navbarNav">
@@ -88,7 +88,7 @@
                             <li class="nav-item mx-auto text-center active">
                                 <a class="nav-link btn btn-link text-uppercase d-flex" style="color: #009c8c!important;" href="/perfil" >
                                 <img class="border border-dark mr-2 my-auto d-block" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}" 
-                                style="width: 30px; height: 30px; border-radius: 50%;"><h5 class="my-auto" style="font-size: 20px;">{{ auth()->user()->alias }}</h5><span class="sr-only">Mi nombre</span></a>
+                                style="width: 30px; height: 30px; border-radius: 50%;"><h5 class="my-auto" style="font-size: 18px;">{{ auth()->user()->alias }}</h5><span class="sr-only">Mi nombre</span></a>
                             </li>
                             <li class="nav-item mx-auto my-2 text-center active">
                                 <a class="nav-link btn btn-link text-uppercase d-inline" style="color: red!important;" onclick="event.preventDefault();

@@ -54,7 +54,5 @@
            </div>
          </div>
        </div>
-
-       <script src="/js/agregarPost.js"></script>
      
     </div>
