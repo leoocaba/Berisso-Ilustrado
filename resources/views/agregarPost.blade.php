@@ -4,7 +4,7 @@
 <div class="col-12 col-md-8 d-flex justify-content-center">
     
     <!-- Button trigger modal -->
-    <div class="container contenedor alert d-flex justify-content-center p-0 mt-2 mb-3">
+    {{-- <div class="container contenedor alert d-flex justify-content-center p-0 mt-2 mb-3">
         <button type="button" class="__btn-modal btn btn-link text-decoration-none col-lg-8 p-0" data-toggle="modal" data-target="#exampleModalCenter">
             <span class="span"></span>
             <span class="span"></span>
@@ -12,7 +12,7 @@
             <span class="span"></span>
             POSTEAR
            </button>
-    </div>
+    </div> --}}
        
        <!-- Modal -->
        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

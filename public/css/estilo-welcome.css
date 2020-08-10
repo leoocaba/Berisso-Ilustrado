@@ -104,7 +104,7 @@ body main {
 /*ESTILO HEADER*/
 
 body header {
-    background-color: black;
+    background-color: #fff;
     z-index: 999;
     top: 0;
     left: 0;

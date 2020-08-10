@@ -28,10 +28,23 @@
     position: absolute;
     z-index: 1;
     right: 10px;
-    top: 3.5px;
+    top: 10px!important;
     cursor: pointer;
-    color: #005cbf;
+    color: #17a2b8;
     transition: color 300ms;
+}
+
+input {
+    border: 0!important;
+    outline: 0!important;
+    border-bottom: 2px solid #000!important;
+    box-shadow: none!important;
+    color: #111!important;
+}
+
+input:focus,
+input:valid {
+    border-color: #17a2b8!important;
 }
 
 .field-icon:hover,
@@ -45,9 +58,9 @@
     height: 24px;
     z-index: 1;
     top: -18px;
-    left: 14px;
+    left: 10px;
     padding: 0;
-    color: black;
+    color: #17a2b8!important;
 }
 
 .field-toTop-user {
@@ -56,7 +69,7 @@
     height: 24px;
     z-index: 1;
     top: -18px;
-    left: 14px;
+    left: 10px;
     padding: 0;
-    color: black;
+    color: #17a2b8!important;
 }

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.__body-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #fff;
+}
+
+.__form {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+}
+
+.__badge-form {
+    border-radius: 30px!important;
+}
+
+.__body-index .__img-index img {
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 300px;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
+}
+
+.__body-index .__registro-login a {
+    position: relative;
+    display: block;
+    padding: 12px 36px;
+    margin: 30px auto;
+    color: #fff;
+    background: rgba(11, 109, 195);
+    border-radius: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.17), 0 10px 7px rgba(0, 0, 0, 0.09);
+}
+
+.__body-index .__registro-login a:hover {
+    background: rgba(8, 85, 153);
+}
+
+.__body-index span {
+    position: absolute!important;
+    background: #fff!important;
+    transform: translate(-50%, -50%)!important;
+    pointer-events: none!important;
+    border-radius: 50%!important;
+    animation: animate 1s linear infinite!important;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: .2;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}

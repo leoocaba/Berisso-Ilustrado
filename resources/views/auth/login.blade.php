@@ -1,10 +1,10 @@
-@extends('bienvenidos')
+@extends('index')
 @section('style')
 <link rel="stylesheet" href="/css/estilo-login.css"> @endsection
 @section('title')
     Ingresar en
 @endsection
-@section('content')
+@section('login-registro')
 <div class="container py-3 px-3">
     <div class="row justify-content-center">
         <div class="col-12 col-md-5">
@@ -21,26 +21,26 @@
 
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" autocomplete="off">
                         @csrf
 
                         <div class="form-group my-0 p-0 d-flex justify-content-center">
                             <div class="col-12 p-0">
 
                                 <div class="field-user">
-                                    <label for="email" style="font-weight: 600;" class="col-12 col-form-label field-label-user">{{ __('Usuario') }}</label>
-                                    <input id="email" style="font-family:Arial, FontAwesome; border-radius: 40px!important; z-index: 1; border: 1px solid #8b8b8b;
+                                    <label for="email" style="font-weight: 600;" class="col-12 col-form-label text-left field-label-user">{{ __('Usuario') }}</label>
+                                    <input id="email" style="font-family:Arial, FontAwesome;
                                     background-color: transparent;" type="email" class="form-control radius field-item-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" 
-                                    placeholder="&#xf007; Email">
+                                    placeholder="&#xf007; Email" required/>
                                     <div class="d-md-none d-none d-md-block">
-                                        <span class="field-icon-user"></span>   
+                                        <div class="field-icon-user"></div>   
                                     </div>
                                 </div>
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
@@ -48,16 +48,16 @@
                         <div class="form-group my-0 p-0 d-flex justify-content-center">
                             <div class="col-12 p-0">
                                 <div class="field">
-                                    <label for="password" style="font-weight: 600;" class="col-12 col-form-label field-label">{{ __('Contraseña') }}</label>
-                                    <input id="password" style="font-family:Arial, FontAwesome; border-radius: 40px!important; z-index: 4; border: 1px solid #8b8b8b;
+                                    <label for="password" style="font-weight: 600;" class="col-12 col-form-label text-left field-label">{{ __('Contraseña') }}</label>
+                                    <input id="password" style="font-family:Arial, FontAwesome;
                                     background-color: transparent;" type="password" class="form-control field-item  @error('password') is-invalid
-                                    @enderror" name="password"  placeholder="&#xf084; Contraseña"> 
-                                    <span class="field-icon"><i id="icon-eye" class="fas fa-eye-slash"></i></span>   
+                                    @enderror" name="password"  placeholder="&#xf084; Contraseña" required/> 
+                                    <i id="icon-eye" class="fas fa-eye-slash field-icon"></i>   
                                 </div>
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="form-group my-1 d-flex justify-content-center">
-                            <div class="col-12 px-0 justify-content-center">
+                            <div class="col-10 px-0 justify-content-center">
                                 <button type="submit" class="btn btn-primary btn-sm btn-block" style="font-family: 'BenchNine', sans-serif; font-size: 24px; border-radius: 40px!important;">
                                     {{ __('Ingresar') }}
                                 </button>
@@ -89,13 +89,22 @@
                             </div>
                         </div>
                         <hr class="py-1 my-1">
-                        <div class="form-group mb-1 d-flex justify-content-center">
-                            <h3 style="font-family: 'BenchNine', sans-serif; font-size: 20px; font-weight: bold;">
-                                Berisso Ilustrado
-                            </h3>
-                        </div>
-                        <hr class="py-0 my-1">
                     </form>
+
+                    <div class="col-12 p-0">
+                        <div class="row justify-content-center p-0 my-auto"  style="font-size: 18px">
+                            <a class="col-10 col-lg-4 __badge-form badge badge-dark text-white text-center py-2 my-2 mx-auto m-lg-auto" href="/">Ir a inicio</a>
+                            <a class="col-10 col-lg-4 __badge-form badge badge-dark text-info text-center py-2 my-2 mx-auto m-lg-auto" href="/register">Registrarme</a>
+                        </div>
+                    </div>
+
+                    {{-- <div class="form-group mt-3  d-flex justify-content-center">
+                        <h3 style="font-family: 'BenchNine', sans-serif; font-size: 20px; font-weight: bold;">
+                            Berisso Ilustrado
+                        </h3>
+                    </div> --}}
+                    <hr class="py-1 mt-2">
+
                 </div>
             </div>
         </div>

@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function(){
+    return view('botonera');
+});
+
 Route::get('/bienvenidos', 'PublicationController@listPublications');
 
 Route::get('/subir/imagenes', function(){

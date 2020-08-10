@@ -29,7 +29,7 @@
         <header>
             <div class="col-12 d-flex mx-auto">
                 <div class="__div-h1 container col-12 d-flex py-2 m-auto">
-                    <h1 class="text-center m-auto d-flex"> <a class="text-decoration-none text-wrap my-auto" id="titulo-del-sitio" href="/">Berisso Ilustrado</a></h1>
+                    <h1 class="text-center m-auto d-flex"> <a class="text-decoration-none text-wrap my-auto" id="titulo-del-sitio" href="/bienvenidos">Berisso Ilustrado</a></h1>
                 </div>
             </div>
             <div class="__container col-12 container d-flex bg-white">

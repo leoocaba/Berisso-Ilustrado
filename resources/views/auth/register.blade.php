@@ -1,4 +1,4 @@
-@extends('bienvenidos')
+@extends('index')
 
 @section('style')
     <link rel="stylesheet" href="/css/estilo-register.css">
@@ -7,17 +7,17 @@
 @section('title')
     Registrarme en
 @endsection
-@section('content')
+@section('login-registro')
 <div class="container p-3">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-            <div class="__form card py-2 px-2" style="color: #000;">
+            <div class="__form card py-2 px-2">
                 <div class="card-header m-1"><h4 class="text-center text-primary">{{ __('Registrarme') }}</h4></div>
                 <div class="card-body">
-                    <form class="justify-content-center" id="formulario" method="POST" action="{{ route('register') }}">
+                    <form class="justify-content-center" id="formulario" method="POST" action="{{ route('register') }}" autocomplete="off">
                         @csrf
                     <div class="col-12 mx-0 p-0 row">
-                        <div class="form-group col-12 p-0 col-md-6">
+                        {{-- <div class="form-group col-12 p-0 col-md-6">
                             <label for="name" style="font-weight: 600;" class="col-form-label px-1 text-center">{{ __('Nombre') }}</label>
 
                             <div class="col-12 py-0 px-1">
@@ -25,9 +25,9 @@
                                 name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Ingrese su nombre" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
@@ -40,70 +40,73 @@
                                 name="surname" value="{{ old('surname') }}" required autocomplete="surname" placeholder="Ingrese su apellido" autofocus>
 
                                 @error('surname')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group col-12 p-0 col-md-6">
-                            <label for="alias" style="font-weight: 600;" class="col-form-label px-1 text-center">{{ __('Nombre de usuario') }}</label>
 
                             <div class="col-12 py-0 px-1">
-                                <input style="border-radius: 30px;" id="alias" type="text" class="form-control px-2 @error('alias') is-invalid @enderror" 
-                                name="alias" value="{{ old('alias') }}" required autocomplete="alias" placeholder="Ingrese un alias" autofocus>
+                                <input id="alias" type="text" class="form-control px-2 @error('alias') is-invalid @enderror" 
+                                name="alias" value="{{ old('alias') }}" required autofocus />
+                                <label for="alias" style="font-weight: 600;" class="px-1 text-left">{{ __('Nombre de usuario') }}</label>
+
 
                                 @error('alias')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group col-12 p-0 col-md-6">
-                            <label for="email" style="font-weight: 600;" class="col-form-label px-1 text-center">{{ __('E-Mail') }}</label>
 
                             <div class="col-12 py-0 px-1">
-                                <input style="border-radius: 30px;" id="email" type="email" class="form-control px-2 @error('email') is-invalid @enderror" 
-                                name="email" value="{{ old('email') }}" placeholder="Ingrese su e-mail" required autocomplete="email">
+                                <input id="email" type="email" class="form-control px-2 @error('email') is-invalid @enderror" 
+                                name="email" value="{{ old('email') }}" required autofocus />
+                                <label for="email" style="font-weight: 600;" class="px-1 text-left">{{ __('E-Mail') }}</label>
+
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group col-12 p-0 col-md-6">
-                            <label for="password" style="font-weight: 600;" class="col-form-label px-1 text-center">{{ __('Contraseña') }}</label>
 
                             <div class="col-12 py-0 px-1">
-                                <input style="border-radius: 30px;" id="password" type="password" class="form-control px-2 @error('password') is-invalid @enderror" 
-                                name="password" placeholder="Ingrese su contraseña" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control px-2 @error('password') is-invalid @enderror" 
+                                name="password" required autofocus />
+                                <label for="password" style="font-weight: 600;" class="px-1 text-left">{{ __('Contraseña') }}</label>
+
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <div class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </div>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group col-12 p-0 col-md-6">
-                            <label for="password-confirm" style="font-weight: 600;" class="col-form-label col-12 px-1 text-wrap">{{ __('Confirmar contraseña') }}</label>
 
                             <div class="col-12 py-0 px-1">
-                                <input style="border-radius: 30px;" id="repassword" type="password" class="form-control px-2" 
-                                name="password_confirmation" placeholder="Repita su contraseña" required autocomplete="new-password">
+                                <input id="repassword" type="password" class="form-control px-2" name="password_confirmation" required autofocus />
+                                <label for="password-confirm" style="font-weight: 600;" class="px-1 text-left">{{ __('Confirmar contraseña') }}</label>
+
                             </div>
                         </div>
                     </div>
                         <hr>
                         <div class="form-group my-4 p-0 d-flex justify-content-center">
-                            <div class="col-12 p-0 justify-content-centerr">
+                            <div class="col-10 p-0 justify-content-centerr">
                                 <button type="submit" style="border-radius: 40px; font-family: 'BenchNine', sans-serif; font-size: 24px;" class="btn btn-primary btn-sm btn-block">
                                     {{ __('Registrarme') }}
                                 </button>
@@ -111,6 +114,14 @@
                         </div>
                         <hr>
                     </form>
+
+                    <div class="col-12 p-0">
+                        <div class="row justify-content-center p-0 my-auto"  style="font-size: 18px">
+                            <a class="col-10 col-lg-4 __badge-form badge badge-dark text-white text-center py-2 my-2 mx-auto m-lg-auto" href="/">Ir a inicio</a>
+                            <a class="col-10 col-lg-4 __badge-form badge badge-dark text-info text-center py-2 my-2 mx-auto m-lg-auto" href="/login">Loguearme</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

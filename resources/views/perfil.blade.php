@@ -7,7 +7,7 @@
         <div class="col-12 wrapper cf mt-0 mx-auto">
 
                 <div id="sidebar" class="col-12 col-md-4 sidebar row mx-auto justify-content-center">
-                    <div class="user-card container row d-flex mx-auto justify-content-center mt-0">
+                    <div class="col-12 user-card container row d-flex mx-auto justify-content-center mt-0">
                         <div class="face front">
                             <img class="front-img" src="{{ url('/uploads/avatars/' . Auth::user()->image) }}">
                         </div>

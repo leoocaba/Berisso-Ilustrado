@@ -1,61 +1,38 @@
 /*ESTILO DE LOS INPUTS*/
 
-.field-Name,
-.field-Surname,
-.field-Alias {
+.form-group {
     position: relative;
+    line-height: 18px;
 }
 
-.field-item-Name,
-.field-item-Surname,
-.field-item-Alias {
-    margin-top: 20px;
-    z-index: 1;
-    border: 1px solid #8b8b8b;
-    background-color: transparent;
-}
-
-.field-label-Name,
-.field-label-Surname,
-.field-label-Alias {
+label {
     position: absolute;
-    top: 15px;
+    bottom: 5px;
     left: 5px;
-    padding: 0px;
-    z-index: -1;
-    color: #8b8b8b;
-    transition: all 300ms;
-    background-color: white;
+    width: 100%;
+    color: #acacac;
+    transition: 0.15s;
 }
 
-.field-icon-Name,
-.field-icon-Surname,
-.field-icon-Alias {
-    position: absolute;
-    z-index: 1;
-    right: 10px;
-    top: 3.5px;
-    cursor: pointer;
-    color: #005cbf;
-    transition: color 300ms;
+input {
+    border: 0!important;
+    outline: 0!important;
+    border-bottom: 2px solid #000!important;
+    box-shadow: none!important;
+    color: #111!important;
+    padding: 4px;
 }
 
-.field-icon:hover,
-.field-icon:hover {
-    color: black;
+input:focus,
+input:valid {
+    border-color: #17a2b8!important;
 }
 
-.field-toTop-Name,
-.field-toTop-Surname,
-.field-toTop-Alias {
-    border-radius: 20px;
-    width: 60px;
-    height: 24px;
-    z-index: 999;
-    top: -18px;
-    left: 14px;
-    padding: 0;
-    color: #000;
+input:focus~label,
+input:valid~label {
+    font-size: 14px!important;
+    top: -18px!important;
+    color: #17a2b8!important;
 }
 
 
@@ -102,7 +79,10 @@ input#btn_enviar {
     opacity: 0;
 }
 
-.card .card-body label {
+.card .card-body h5,
+.card h2 {
+    letter-spacing: 2px;
+    color: #000;
     font-size: 20px;
     font-family: 'BenchNine', sans-serif;
 }
