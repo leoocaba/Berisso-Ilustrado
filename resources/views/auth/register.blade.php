@@ -17,7 +17,7 @@
                     <form class="justify-content-center" id="formulario" method="POST" action="{{ route('register') }}" autocomplete="off">
                         @csrf
                     <div class="col-12 mx-0 p-0 row">
-                        {{-- <div class="form-group col-12 p-0 col-md-6">
+                         <div class="form-group col-12 p-0 col-md-6">
                             <label for="name" style="font-weight: 600;" class="col-form-label px-1 text-center">{{ __('Nombre') }}</label>
 
                             <div class="col-12 py-0 px-1">
@@ -45,7 +45,7 @@
                                     </div>
                                 @enderror
                             </div>
-                        </div> --}}
+                        </div>
 
                         <div class="form-group col-12 p-0 col-md-6">
 
